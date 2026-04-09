@@ -3,14 +3,23 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'projetos' => [
+            ['imagem' => 'cabin.png', 'ativo' => 'true'],
+            ['imagem' => 'cake.png', 'ativo' => 'true'],
+            ['imagem' => 'circus.png', 'ativo' => 'true'],
+            ['imagem' => 'game.png', 'ativo' => 'false'],
+            ['imagem' => 'safe.png', 'ativo' => 'true'],
+            ['imagem' => 'submarine.png', 'ativo' => 'true'],
+        ],
+    ]);
 });
 
 Route::get('/passagem/dados', function (){
     return view('exemplos.passagem_dados', ['nome'=> 'TreinaWeb', 'descricao' => 'Escola de Desenvolvimento']);
 });
 
-Route::get('/exibicao-json', function (){
+Route::get('/exibicao/json', function (){
     return view('exemplos.exibicao_json')->with([
         'posts'=> [
              [
@@ -33,3 +42,4 @@ Route::get('/frameworks/js', function () {
 Route::get('/comentarios', function () {
     return view('exemplos.comentarios');
 });
+
