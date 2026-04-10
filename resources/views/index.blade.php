@@ -15,6 +15,8 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Bootstrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -26,10 +28,24 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                    @php
+                        $itensMenu = [
+                            [
+                                'descricao' => 'Portfolio',
+                                'link' => '#portfolio'
+                            ],
+                            [
+                                'descricao' => 'Sobre',
+                                'link' => '#about'
+                            ],
+                            [
+                                'descricao' => 'Contato',
+                                'link' => '#contact'
+                            ]
+                        ];
+                    @endphp
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        @each('parciais._itens_menu', $itensMenu, 'item')
                     </ul>
                 </div>
             </div>
@@ -40,7 +56,7 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Luis Antonio Sanches Dias</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -78,20 +94,8 @@
                         <h1 class="text-center">Nenhum projeto disponível.</h1>
                     @endforelse
                     
-                    <nav aria-label="Page navigation example" style="margin-top: 50px;">
-                        <ul class="pagination pagination-lg justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                            </li>
-                            
-                            @for ($i = 1; $i <= 10; $i++)
-                                <li class="page-item"><a class="page-link" href="#">{{ $i }}</a></li>
-                            @endfor
-                            
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                        </ul>
-                    </nav>
+                    @includeIf('parciais._paginacao', ['firstPage' => 'first', 'lastPage' => 'last'])
+
                 </div>
             </div>
         </section>
