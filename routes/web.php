@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteHerancaController;
+
+Route::get('/site/heranca', [SiteHerancaController::class, 'home'])->name('home');
+Route::get('/site/heranca/portfolio', [SiteHerancaController::class, 'portfolio'])->name('portfolio');
+Route::get('/site/heranca/sobre', [SiteHerancaController::class, 'sobre'])->name('sobre');
+Route::get('/site/heranca/contato', [SiteHerancaController::class, 'contato'])->name('contato');
+
 
 Route::get('/', function () {
     return view('index', [
