@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="{{ route('site.componente.home') }}"><i class="bi bi-house"></i> </a>
                 <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
@@ -32,15 +32,15 @@
                         $itensMenu = [
                             [
                                 'descricao' => 'Portfolio',
-                                'link' => '#portfolio'
+                                'link' => 'site.componente.portfolio'
                             ],
                             [
                                 'descricao' => 'Sobre',
-                                'link' => '#about'
+                                'link' => 'site.componente.sobre'
                             ],
                             [
                                 'descricao' => 'Contato',
-                                'link' => '#contact'
+                                'link' => 'site.componente.contato'
                             ]
                         ];
                     @endphp
@@ -54,7 +54,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="/assets/img/avataaars.svg" alt="..." />
+                <img class="masthead-avatar mb-5" src="/assets/img/avatar1.png" alt="..." />
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Luis Antonio Sanches Dias</h1>
                 <!-- Icon Divider-->

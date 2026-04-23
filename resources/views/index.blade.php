@@ -29,18 +29,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     @php
-                        $itensMenu = [
+                         $itensMenu = [
                             [
                                 'descricao' => 'Portfolio',
-                                'link' => '#portfolio'
+                                'link' => 'site.heranca.portfolio'
                             ],
                             [
                                 'descricao' => 'Sobre',
-                                'link' => '#about'
+                                'link' => 'site.heranca.sobre'
                             ],
                             [
                                 'descricao' => 'Contato',
-                                'link' => '#contact'
+                                'link' => 'site.heranca.contato'
                             ]
                         ];
                     @endphp
