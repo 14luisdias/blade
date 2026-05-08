@@ -28,22 +28,6 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    @php
-                       $itensMenu = [
-                            [
-                                'descricao' => 'Portfolio',
-                                'link' => 'site.componente.portfolio'
-                            ],
-                            [
-                                'descricao' => 'Sobre',
-                                'link' => 'site.componente.sobre'
-                            ],
-                            [
-                                'descricao' => 'Contato',
-                                'link' => 'site.componente.contato'
-                            ]
-                        ];
-                    @endphp
                     <ul class="navbar-nav ms-auto">
                         @each('parciais._itens_menu', $itensMenu, 'item')
                     </ul>
@@ -51,7 +35,9 @@
             </div>
         </nav>
         <div class="mt-5"></div>
+
          {{ $slot }}
+         
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">

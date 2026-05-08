@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="titulo">
-        Portfolio
+        Página de Portfolio
     </x-slot>
             <!-- Portfolio Section-->
     <section class="page-section portfolio" id="portfolio">

@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="titulo">
-        Home
+        Página de Home
     </x-slot>
     <!-- Masthead-->
     <header class="masthead bg-primary text-white text-center">

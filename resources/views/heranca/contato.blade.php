@@ -68,7 +68,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl " id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -76,3 +76,9 @@
         </section>
 
 @endsection
+
+@push('contato_scripts')
+    <script src="/assets/jqBootstrapValidation-137.js"></script>
+    <script src="/assets/contact-me.js"></script>
+    
+@endpush

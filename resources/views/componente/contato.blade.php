@@ -1,6 +1,6 @@
 <x-layout>
     <x-slot name="titulo">
-        Contato
+        Página de Contato
     </x-slot>
     <section class="page-section" id="contact">
         <div class="container">
